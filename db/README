@@ -1,0 +1,2 @@
+create database:
+run t/00create_db.t
