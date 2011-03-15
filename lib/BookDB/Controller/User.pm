@@ -80,6 +80,7 @@ sub form
       params => $c->req->parameters );
    return unless $self->user_form->validated;
    my $result = $self->user_form->values;
+   $user = $self->user_form->item;
    $c->res->redirect( $c->uri_for_action('/user/view', [$user->id]) );
 }
 
